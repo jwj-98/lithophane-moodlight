@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Con_lithophane">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|left">
+    <ImageView
+        android:id="@+id/btnOn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/btn" />
+
+    <!--이 이미지에서 색상 추출-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/colorwheel" />
+
+    <!--on/off 버튼-->
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="10dp"-->
+    <!--        android:layout_gravity="center">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/OnOfftextView"-->
+    <!--            android:layout_width="15mm"-->
+    <!--            android:layout_height="5mm"-->
+    <!--            android:text="On / Off"-->
+    <!--            android:textSize="20sp"-->
+    <!--            android:textColor="#000"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:gravity="center"/>-->
+
+    <!--        <Switch-->
+    <!--            android:id="@+id/OnOffswitch"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="5mm"-->
+    <!--            android:layout_toRightOf="@+id/OnOfftextView"-->
+    <!--            android:switchMinWidth="12mm"/>-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--밝기 조절-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/LCText"
+            android:layout_width="15mm"
+            android:layout_height="5mm"
+            android:gravity="center"
+            android:text="밝기 조절"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/LCBar"
+            android:layout_width="match_parent"
+            android:layout_height="5mm"
+            android:layout_toRightOf="@+id/LCText"
+            android:max="100" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <!--색상선택-->
+        <TextView
+            android:id="@+id/colorChoice"
+            android:layout_width="15mm"
+            android:layout_height="10mm"
+            android:gravity="center"
+            android:text="조명 색상"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--view - 색상 선택 보기-->
+        <View
+            android:id="@+id/colorView"
+            android:layout_width="match_parent"
+            android:layout_height="10mm"
+            android:layout_toRightOf="@+id/colorChoice"
+            android:padding="10mm"
+            android:layout_marginHorizontal="2mm"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <!--set HEX, 선택한 색상의 rgb값 축출-->
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="15mm"
+            android:layout_height="5mm"
+            android:gravity="center"
+            android:text="RGB val"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--view - 색상 선택 보기-->
+        <TextView
+            android:id="@+id/rgb"
+            android:layout_width="match_parent"
+            android:layout_height="5mm"
+            android:layout_marginLeft="2mm"
+            android:layout_toRightOf="@id/resultTv"
+            android:gravity="center_vertical"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnReservation"
+        android:layout_width="15mm"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:text="예약설정"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</LinearLayout>
+</ScrollView>

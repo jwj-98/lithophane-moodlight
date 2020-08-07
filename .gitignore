@@ -1,0 +1,16 @@
+# Android
+.gradle/
+build/
+local.properties
+*.iml
+*.apk
+captures/
+.externalNativeBuild/
+.cxx/
+
+# IDE
+.idea/
+.vscode/
+
+# 개인 설정
+secrets.h
